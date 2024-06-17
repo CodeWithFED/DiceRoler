@@ -1,0 +1,127 @@
+@keyframes pop {
+    0% {
+        /* color: rgb(213, 213, 0); */
+        transform: rotate(10deg);
+        rotate: 10deg;
+    }
+
+    20% {
+        scale: 1140%;
+    }
+
+    30% {
+        color: rgb(250, 250, 21);
+    }
+
+    40% {
+        box-shadow: 0 0 2rem 1rem hsl(60, 65%, 76%);
+        translate: 1rem 0.5rem;
+        background: hsl(60, 65%, 76%);
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes body {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        transition: 100%;
+    }
+}
+
+::selection {
+    user-select: none;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    color: #f9f9f9;
+    background: #333;
+    padding: 0 5rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+.animation_1 {
+    animation: pop 1s linear;
+}
+
+.animation_2 {
+    animation: body 1s linear;
+}
+
+.toggler {
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 100%;
+}
+
+.bg--light {
+    background: #f9f9f9;
+    color: #333;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #fff;
+    background: tomato;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    width: 6rem;
+    margin: 1rem;
+}
+
+.btn:hover,
+.btn:focus {
+    color: tomato;
+    border: 2px solid tomato;
+    background: #fff;
+}
+
+.btn:active,
+.btn:focus {
+    box-shadow: -0.5rem 0.5rem 0 0;
+}
+
+.box {
+    display: flex;
+    border: 1px solid lightcoral;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    object-fit: cover;
+    width: 1rem;
+    flex: 1;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .box {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    img {
+        width: 70%;
+    }
+
+    body {
+        padding: 0;
+    }
+}
